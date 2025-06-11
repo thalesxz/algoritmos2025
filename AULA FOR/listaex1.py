@@ -18,3 +18,10 @@ print("\n")
 for i in range(1, 101, 2):
     print(i)
 print("\n")
+
+#e)
+soma = 0
+for i in range(1, 101):
+    soma += i
+
+print(soma)
