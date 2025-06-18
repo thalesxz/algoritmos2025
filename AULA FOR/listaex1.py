@@ -25,3 +25,14 @@ for i in range(1, 101):
     soma += i
 
 print(soma)
+print("\n")
+
+#g)
+X = int(input("Informe um valor inicial(X): "))
+Y = int(input("Informe um valor final(Y) maior do que o inicial(X): "))
+if(X > Y):
+    print("O valor inicial não pode ser maior que o valor final!")
+soma = 0 
+for i in range (X, Y+1):
+    soma += i
+print(soma)
