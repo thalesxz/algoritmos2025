@@ -84,3 +84,44 @@ print("Média aritmética dos valores:", media)
 print("\nNúmeros nas posições pares:")
 for i in range(0, len(vetor), 2):
     print(vetor[i])
+
+inicio = int(input("POSIÇÃO INICIAL: "))
+final = int(input("POSIÇÃO FINAL: "))
+if(inicio < 0 or final > len(vetor) or inicio > final):
+    print("POSIÇÃO INVÁLIDA!!!")
+else:
+    print("\nNúmeros no segmento entre as posições", inicio, "e", final, ":")
+    for i in range(inicio, final + 1):
+        print(vetor[i])
+
+somavetor = 0
+for i in range(inicio, final + 1):
+    somavetor += vetor[i]
+print("\nSoma dos números no segmento entre as posições", inicio, "e", final, ":", somavetor)
+
+
+maior = vetor[0]
+menor = vetor[0]
+indice_maior = 0
+indice_menor = 0
+
+for i in range(1, len(vetor)):
+    if(vetor[i] > maior):
+        maior = vetor[i]
+        indice_maior = i
+    if(vetor[i] < menor):
+        menor = vetor[i]
+        indice_menor = i
+
+print("\nMaior número:", maior, "na posição", indice_maior)
+print("Menor número:", menor, "na posição", indice_menor)
+
+pares = 0
+impares = 0
+for i in range(0, len(vetor)):
+    if(vetor[i] % 2 == 0):
+        pares += 1
+    else:
+        impares += 1
+print("\nQuantidade de números pares:", pares)
+print("Quantidade de números ímpares:", impares)
