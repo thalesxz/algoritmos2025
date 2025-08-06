@@ -233,27 +233,27 @@
 # print(f"\nClassificação: {classificacao}")
 
 #15)
-n = int(input("Quantos times vão participar do campeonato? "))
+# n = int(input("Quantos times vão participar do campeonato? "))
 
-nomes = [0] * n
-pontos = [0] * n
+# nomes = [0] * n
+# pontos = [0] * n
 
-for i in range(0, len(nomes)):
-    nomes[i] = input(f"Digite o nome do {i + 1}º time: ")
-    pontos[i] = int(input(f"Digite a pontuação final do time {nomes[i]}: "))
+# for i in range(0, len(nomes)):
+#     nomes[i] = input(f"Digite o nome do {i + 1}º time: ")
+#     pontos[i] = int(input(f"Digite a pontuação final do time {nomes[i]}: "))
 
-indice_campeao = 0
-indice_vice = -1
+# indice_campeao = 0
+# indice_vice = -1
 
-for i in range(1, n):
-    if(pontos[i] > pontos[indice_campeao]):
-        indice_vice = indice_campeao
-        indice_campeao = i
-    elif(indice_vice == -1 or pontos[i] > pontos[indice_vice]):
-        if(i != indice_campeao):
-            indice_vice = i
+# for i in range(1, n):
+#     if(pontos[i] > pontos[indice_campeao]):
+#         indice_vice = indice_campeao
+#         indice_campeao = i
+#     elif(indice_vice == -1 or pontos[i] > pontos[indice_vice]):
+#         if(i != indice_campeao):
+#             indice_vice = i
 
-print("\nResultado Final:")
-print(f"Campeão: {nomes[indice_campeao]} com {pontos[indice_campeao]} pontos.")
-print(f"Vice-campeão: {nomes[indice_vice]} com {pontos[indice_vice]} pontos.")
+# print("\nResultado Final:")
+# print(f"Campeão: {nomes[indice_campeao]} com {pontos[indice_campeao]} pontos.")
+# print(f"Vice-campeão: {nomes[indice_vice]} com {pontos[indice_vice]} pontos.")
 
