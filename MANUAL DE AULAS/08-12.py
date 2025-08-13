@@ -11,8 +11,29 @@
 #TRY e EXCEPT: tenta executar o try, se não der faz o codigo do Except, utiliza para testar o código sem dar erro.
 
 import biblioteca as bib
-bib.ola()
+# bib.ola()
 
-num = bib.inputInt()    
-num2 = bib.inputInt()
-print(f"Os números são: {num} e {num2}")
+# num = bib.inputInt("Digite um número: ")    
+# num2 = bib.inputInt("Digite outro: ")
+# print("Os números são:", num, "e",num2)
+
+#EX1 (PEDIR 2 NUMEROS USAR FUNÇÃO APRESENTAR NA TELA) PARA ELES FACA A POTENCIA E A RAIZ E APRESENTE NA TELA
+num1 = int(input("Digite um número: "))
+num2 = int(input("Digite outro: "))
+
+res = bib.somar2(num1, num2)
+print(f"{num1} + {num2} = {res}")
+
+potencia = bib.pot(num1, num2)
+print(f"{num1} na potência {num2} = {potencia}")
+
+raiz = bib.raiz(num1, num2)
+print(f"{num1} na raiz {num2} = {raiz}")
+
+
+#EX2 (PEDIR 3 NUMEROS USAR FUNCAO APRESENTAR NA TELA)
+
+
+
+
+#EX3 (PEDIR VALOR E MOSTRAR SE É PAR OU IMPAR)
