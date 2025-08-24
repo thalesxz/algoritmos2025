@@ -117,3 +117,63 @@ def maiorvetor(vetor):
         if(vetor[i] > maior):
             maior = vetor[i]
     return maior
+
+def ehPrimo(x:int):
+    cont = 0
+    for i in range(1, x+1):
+        resto = x % i
+        if(resto == 0):
+            cont += 1
+    if(cont == 2):
+        return True
+    else:
+        return False
+
+def verificar_notas_abaixo_da_media(notas, nomes):
+    soma = 0
+    for i in range(0, len(notas)):
+        soma += notas[i]
+    media = soma / len(notas)
+    abaixo_da_media = [] * len(notas)
+    for i in range(0, len(notas)):
+        if(notas[i] < media):
+            abaixo_da_media += [nomes[i]]
+    return abaixo_da_media
+
+def calcular_valor_estoque(codigos, quantidades, precos):
+    valor_total = []
+    for i in range(0, len(codigos)):
+        valor = quantidades[i] * precos[i]
+        valor_total += [valor]
+    return valor_total
+
+def dias_acima_referencia(temperaturas, referencia: int):
+    cont = 0
+    for i in range(0, len(temperaturas)):
+        if(temperaturas[i] >= referencia):
+            cont += 1
+    return cont
+        
+def salarios_acima_media(salarios, nomes):
+    soma = 0
+    for i in range(0, len(salarios)):
+        soma += salarios[i]
+    media = soma / len(salarios)
+    salario_maior = []
+    for i in range(0, len(salarios)):
+        if(salarios[i] > media):
+            salario_maior += [nomes[i]]
+    return salario_maior
+
+def total_vendas_por_categoria(vendas, categorias):
+    total_por_categoria = {}  
+    for i in range(len(vendas)):
+        categoria = categorias[i]
+        valor = vendas[i]
+        if(categoria in total_por_categoria):
+            total_por_categoria[categoria] += valor  
+        else:
+            total_por_categoria[categoria] = valor   
+    
+    return total_por_categoria
+
