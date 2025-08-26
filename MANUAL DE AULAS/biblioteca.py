@@ -43,6 +43,10 @@ def raiz(valor:float, grau:int):
     resultado = valor ** (1/grau)
     return resultado
 
+def raizquadrada(valor: int):
+    resultado = math.sqrt(valor)
+    return resultado
+
 def multiplicar(v1: int, v2: int):
     mult = v1 * v2
     return mult
@@ -174,6 +178,48 @@ def total_vendas_por_categoria(vendas, categorias):
             total_por_categoria[categoria] += valor  
         else:
             total_por_categoria[categoria] = valor   
-    
     return total_por_categoria
+
+def calculartabuada(num1: int):
+    for i in range(1, 11):
+        print(f"{num1} x {i} = {num1 * i}")
+
+def imprimerVetor(vetor):
+    print("Vetor: ")
+    for i in range(0, len(vetor)):
+        print(vetor[i])
+
+def maiorvetor(vetor):
+    maior = vetor[0]
+    for i in range(0, len(vetor)):
+        if(vetor[i] > maior):
+            maior = vetor[i]
+    return maior    
+
+def menorvetor(vetor):
+    menor = vetor[0]
+    for i in range(0, len(vetor)):
+        if(vetor[i] < menor):
+            menor = vetor[i]
+    return menor    
+
+def multiplicar_vetores(vetor1, vetor2):
+    if(len(vetor1) == len(vetor2)):
+        vetor = [0] * len(vetor1)
+        for i in range(0, len(vetor1)):
+            vetor[i] = vetor1[i] * vetor2[i]
+        return vetor
+    else:
+        print("Não pode multiplicar vetores de tamanhos diferentes.")
+
+def mediavetor(vetor1, vetor2):
+    if(len(vetor1) == len(vetor2)):
+        vetor = [0] * len(vetor1)
+        soma = 0
+        for i in range(0, len(vetor1)):
+            vetor[i] = vetor1[i] + vetor2[i]
+            soma += vetor[i]
+        media = soma/len(vetor1)
+        return media
+
 
