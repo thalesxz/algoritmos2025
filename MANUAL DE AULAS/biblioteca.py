@@ -138,10 +138,16 @@ def verificar_notas_abaixo_da_media(notas, nomes):
     for i in range(0, len(notas)):
         soma += notas[i]
     media = soma / len(notas)
-    abaixo_da_media = [] * len(notas)
+    abaixo = 0
     for i in range(0, len(notas)):
         if(notas[i] < media):
-            abaixo_da_media += [nomes[i]]
+            abaixo += 1
+    abaixo_da_media = [""] * abaixo
+    pos = 0
+    for i in range(0, len(notas)):
+        if(notas[i] < media):
+            abaixo_da_media[pos] += [nomes[i]]
+            pos += 1
     return abaixo_da_media
 
 def calcular_valor_estoque(codigos, quantidades, precos):
