@@ -1,5 +1,6 @@
 # ALGORITMOS DE BUSCA 
     # BUSCA LINEAR/PESQUISA SEQUENCIAL(funciona ordenado e não ordenado):
+    # Complexidade = O(n)
 vetor = [15, 10, 3, 12, 5, 7, 1]
 valor = int(input("Informe um número: "))
 
@@ -41,6 +42,7 @@ else:
         # inicio = 0 (caso seja mais que o meio) depois se torna i = m+1
         # meio = int((inicio + fim)/2)
         # fim = len(vetor)-1 (caso seja menor que o meio) depois se torna f= m-1
+        # Complexidade = O(log n base 2)
 print("Busca binária")
 encontrei = False
 posicao = -1 #-None
