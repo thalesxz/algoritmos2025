@@ -1,0 +1,4 @@
+João, 5.3
+Pedro, 7.3
+Vitor, 8.2
+Gustavo, 6.9
