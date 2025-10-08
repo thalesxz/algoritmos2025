@@ -6,7 +6,7 @@
     # A = escrita(acrescentar coisas no arquivo, quando abre mantem tudo e começa o cursor no final, cria o arquivo se não tiver)
 
 #modo de arbertura do arquivo
-  # tem que ser igual r não pode usar o write e sim read
+  # tem que ser igual, r não pode usar o write e sim read
 arquivo = open("dados.txt", "a", encoding="utf8") #nos parênteses = 1° nome do arquivo em aspas, 2° o modo em aspas(r,w,a), 3° se quiser conjunto de caracteres enconding = "utf8"
 # para abrir um arquivo que não está localizado junto usar o endereço completo primeiro do nome do arquivo
 # com mais 1 contra barra no lugar onde tem contra barra EX: open("\\Users\\Aluno\\Downloads\\algoritmos2025\\dados.txt", "r")
@@ -36,5 +36,8 @@ print(f"O arquivo tem {qtde} linhas")
 #Percorre a lista de strings com o conteúdo
 for i in range(0, len(conteudo)):
     print(conteudo[i], end="") # o end = "" serve para nao quebrar linha ja que ta quebrando no arquivo
+
+# strip() REMOVE todo o espaço em branco do ínicio ao fim
+# split() quebra os valores em um vetor separado por um caracter(, ou (barra de espaço), etc)
 
 
