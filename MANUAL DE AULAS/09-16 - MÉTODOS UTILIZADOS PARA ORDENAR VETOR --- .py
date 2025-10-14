@@ -16,7 +16,7 @@ print(vet) #Envia o valor modificado pela função
 
 
 
-#INSERÇÃO
+# #INSERÇÃO
 
 def insercao(vetor):
     for i in range(1, len(vetor)):
@@ -40,19 +40,13 @@ def selecao(vetor):
     for i in range(0, len(vetor)-1):
         menor = vetor[i]
         imenor = i
-
-        for j in range(i + 1, len(vetor)): #percorre onde está +1 para encontrar menor valor
+        for j in range(i+1, len(vetor)):
             if(vetor[j] < menor):
-                vetor[j] = menor
+                menor = vetor[j]
                 imenor = j
-
-    vetor[imenor] = vetor[i] #valor com o menor indicie recebe
-    vetor[i] = menor # valor com os primeiros indicies recebe o menor
+        vetor[imenor] = vetor[i]
+        vetor[i] = menor
 
 print(vetor)
 selecao(vetor)
 print(vetor)
-
-
-
-
