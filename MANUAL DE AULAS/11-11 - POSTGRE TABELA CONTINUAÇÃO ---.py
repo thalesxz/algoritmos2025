@@ -50,8 +50,16 @@ while(True):
     opcao = int(input("OPÇÃO: "))
 
     if(opcao == 1):
-        bib.cadastrar()
-    if(opcao == 2)
+        nome = input("Nome produto: ")
+        preco = float(input("Preço produto: "))
+        data = input("Data Validade")
+        bib.cadastrar(nome, preco, data)
+    if(opcao == 2):
+        id = int(input("Código para alterar o produto: "))
+        nome = input("Nome produto: ")
+        preco = float(input("Preço produto: "))
+        data = input("Data Validade")
+
 
 
 

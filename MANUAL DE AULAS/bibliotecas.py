@@ -21,7 +21,7 @@ def incluir():
     conexao.commit()
 
 
-def cadastrar():
+def cadastrar(nome, preco, data):
     con = psycopg2.connect(
         host = "localhost",
         database = "algoritmos",
@@ -33,19 +33,11 @@ def cadastrar():
     sql ="""INSERT INTO produtos(nome, preco, data_validade)"
     VALUES (%s, %s, %s)
     """
-    nome = input("Nome do produto: ")
-    preco = float(input("Preço do produto: "))
-    data = input("Data de validade: ")
-    valores = [(f"{nome}"), (f"{preco}"), (f"{data}")]
+    valores = [(nome, preco, data)]
     cursor.execute(sql, valores)
     con.commit()
-    cursor.close()
-    con.close()
-    
 
-
-
-def alterar():
+def alterar(id, nome, preco, data):
     con = psycopg2.connect(
     host = "localhost",
     database = "algoritmos",
@@ -54,5 +46,28 @@ def alterar():
     port = 5432
     )
     cursor = con.cursor()
-    id = int(input("Informe o id do produto que quer alterar: "))
-    sql = """UPTADE produtos(nome, preco, data_validade)
+    sql = """UPDATE produtos
+    SET nome = %s, 
+        valor= %s, 
+        data_validade= %s
+    WHERE id= %s ;
+    """
+    cursor.execute(sql)
+    con.commit()
+
+def excluir(id):
+    con = psycopg2.connect(
+    host = "localhost",
+    database = "algoritmos",
+    user = "postgres",
+    password = "postgres",
+    port = 5432
+    )
+    cursor = con.cursor()
+    sql ="""DELATE FROM produtos(nome, preco, data_validade)"
+    """
+    valores = [(f"{nome}"), (f"{preco}"), (f"{data}")]
+    cursor.execute(sql, valores)
+    con.commit()
+    cursor.close()
+    con.close()
